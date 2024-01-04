@@ -51,4 +51,26 @@ Normalmente a coleta de requisitos é feita de forma bastante informal e desorga
 - Anotações no papel
 - Validação dos requisitos
 
-Com este método é comum haver interpretações erradas e expectativas desalinhadas
+Com este método é comum haver interpretações erradas e expectativas desalinhadas,itens esquecidos.
+Gherkin é um formato para capturar esses requisitos e se torna a única fonte da verdade (SSOT - Single Source of Truth)
+
+## Documentando User Stories - Histórias de Usuário
+
+Descrição informal da jornada de usuário em uma feature/funcionalidade
+Escrita usando a perspectiva do usuário
+Deve haver um critério de aceite - um resultado esperado
+Deve haver uma ação que o usuário deve performar
+Deve haver um critério/ condições para que a ação ocorra
+Faz parte do Agile / Kanban
+
+Para fazer uma "User Story" de sucesso precisamos saber : 
+- Papel/Ator envolvido - Quem está envolvido na ação
+- Condições - Pré requisitos (Ex.: O usuário precisa estar logado)
+- Ação - Oque deve ser feito (ex.: O usuário clica no botão)
+- Resultado - Oque deverá ocorrer
+
+Exemplo de cenário
+Um Consumidor pode comprar um produto no site
+Quais as condições o usuário precisa ter para comprar o produto? 
+Qual será a chamada para a ação (CTA)? É um botão ?
+Qual o papel/ator ? 

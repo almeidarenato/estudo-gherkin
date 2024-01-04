@@ -70,7 +70,19 @@ Para fazer uma "User Story" de sucesso precisamos saber :
 - Resultado - Oque deverá ocorrer
 
 Exemplo de cenário
-Um Consumidor pode comprar um produto no site
-Quais as condições o usuário precisa ter para comprar o produto? 
 Qual será a chamada para a ação (CTA)? É um botão ?
-Qual o papel/ator ? 
+Um Consumidor deve clicar em um botão no site
+Qual o papel/ator ?  Consumidor
+
+História do Usuário / User Story : 
+Um Consumidor clicar no botão de compra na página do produto e o produto é adicionado ao carrinho de compras
+
+Traduzindo para o Gherkin usando as palavras chaves : 
+
+
+|           |                 UserStory                 | Gherkin |
+|:---------:|:-----------------------------------------:|:-------:|
+|   Quem?   |                Consumidor                 |  Given  |
+| Condição  |           Na Página do Produto            |  Given  |
+|   Ação    |        Clicar no botão de comprar         |  When   |
+| Resultado | Produto Adicionado ao Carrinho de Compras |  Then   |

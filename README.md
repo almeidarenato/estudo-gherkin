@@ -1,4 +1,4 @@
-# estudo-gherkin
+# Estudo sobre gherkin
 
 repositorio onde reuni anotações sobre estudo de gherkin e BDD
 
@@ -86,3 +86,60 @@ Traduzindo para o Gherkin usando as palavras chaves :
 | Condição  |           Na Página do Produto            |  Given  |
 |   Ação    |        Clicar no botão de comprar         |  When   |
 | Resultado | Produto Adicionado ao Carrinho de Compras |  Then   |
+
+## Testando com Gherkin
+
+Apesar dele estar vinculado ao Cucumber para permitir o teste automatizado ele pode ser feito de forma Manual.
+Os requisitos de negócio devem alimentar o plano de testes.
+Testes automatizados devem dar feedback ao time de testes relatando o ocorrido. 
+
+Os testes **automatizados** são um recurso a mais para a equipe de testes que a  melhora ao invés de substituí-la .
+Independente de quanto for bom o teste automatizado isso não substitui o teste manual.
+
+## Gherkin como um SSOT (Single source of truth - Unica fonte da verdade)
+
+O principio do Gherkin é ser uma Unica fonte da verdade, de diversas fontes / recursos.
+
+Fontes : 
+- Requisitos de Negócio
+- User Stories
+- Testes Manuais
+- Testes Automatizados
+- Documentação do Sistema
+
+## Gherkin Linguagem
+
+### Palavras Chave
+
+O Gherkin é um conjunto de regras gramáticas estruturadas em uma forma determinada. Construída em uma linguagem de fácil entendimento .
+
+Palavra Chave  "Feature" - 
+Funcionalidade de alto nível de um sistema ou epico. Ela agrupa cenários relacionados. Ela possui 3 características: 
+- Sumario - Exemplo "Checkout", "Carrinho de Compras" ,   "Autenticação" , "Funcionalidade#112"
+- Descrição - Descrição que provê mais detalhes de uma funcionalidade. 
+Exemplo: "Carrinho de Compras - O usuário deve poder alterar os itens do carrinho , mudar quantidades , limpar o carrinho"
+- Cenários  - Lista de cenários de uma feature de um sistema. É uma situação que pode ser testada. Um exemplo concreto que representa uma regra de negócio.
+
+### Cenários
+Um cenário tem 3 características:  
+ - Sumário - Exemplos de um sumário para um cenário:
+
+   - "O usuário pode ver os detalhes de um produto"
+   - "O usuário pode adicionar um produto no carrinho"
+   - "O usuário pode finalizar a compra da página de carrinho de compras"
+   - "O usuário pode aumentar a quantidade de produtos no carrinho"
+   - "O usuário pode limpar os produtos do carrinho"
+   - "O usuário pode mudar a senha"
+
+    Exemplos de Cenários ruins
+    - "O usuário pode usar a página" - Muito vago
+    - "Usuário pode fazer uma compra" - Não é especifico o suficiente nao fornece uma ação em algum lugar específico.
+    
+
+ - Descrição - Tem um papel de fornecer mais detalhes sobre o cenário. É opcional porém é recomendado para fins de documentação. A inclusão dela deixa o sumário mais preciso.
+ Exemplo: 
+ **Sumario:** "O usuário pode finalizar a compra na página do carrinho"
+ **Descrição:** "o usuário deve conseguir clicar no botão de finalizar compra para ir para a página de finalização de compra , quando estiver visualizando a página de carrinho"
+
+ - Lista de Passos
+

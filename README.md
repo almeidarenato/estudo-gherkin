@@ -132,7 +132,7 @@ Fontes :
 
 O Gherkin é um conjunto de regras gramáticas estruturadas em uma forma determinada. Construída em uma linguagem de fácil entendimento .
 
-#### Palavra Chave "Feature"
+#### Palavra Chave "Feature" / "Funcionalidade", "Característica"
 
 Funcionalidade de alto nível de um sistema ou epico. Ela agrupa cenários relacionados. Ela possui 3 características:
 
@@ -169,7 +169,7 @@ Um Scenario ou cenário tem 3 características:
 Um cenário deve conter uma lista de passos para validar um sistema
 Os passos dentro do cenário deverão conter outras palavras chaves do Gherkin.
 
-### Palavra-chave "Given" / "Dado"
+### Palavra-chave "Given" / "Dado", "Dada", "Dados", "Dadas"
 
 Usado para descrever o contexto inicial do cenário. Geralmente algo que ocorreu no passado.
 
@@ -234,45 +234,45 @@ Usado para uma lista de coisas extensa. É opcional e pode ser usado ao invés d
 
 Exemplo:
 
-- Given Eu estou numa loja de conveniencia
+- Given (Dado) Eu estou numa loja de conveniencia
 - `*` Eu compro banana
 - `*` Eu compro maçã
 - `*` Eu compro laranja
 
 ### Palavras-chave Secundárias
 
-#### Palavra-chave "Rule"
+#### Palavra-chave "Rule" / "Regra"
 
 Agrupa um ou mais cenários juntos que utilizam a mesma regra de negócio . É um mecanismo simples de agrupamento e opcional. Adicionado no Gherkin 6 então nem sempre estará disponível no cucumber
 
-#### Palavra-chave "Background"
+#### Palavra-chave "Background" / "Contexto", "Cenário de Fundo"
 
-Serve para evitar a necessidade de repetir um "Given", desde que seja compartilhado entre os cenários.
+Serve para evitar a necessidade de repetir um "Given"/"Dado", desde que seja compartilhado entre os cenários.
 
-#### Palavra-chave "Scenario Outline/Examples"
+#### Palavra-chave "Scenario Outline/Examples" / "Esquema do Cenário", "Exemplo", "Delineação do Cenário"
 
 Permite "rodar" o mesmo cenário multiplas vezes com diferentes combinações de valores
 
 Ao invés de escrever assim:
 
-- Scenario: example
-- Given produto tem o estoque nivel 10
-- When A quantidade do carrinho mudar para 2
-- Then A quantidade do nível do estoque muda para 8
+- Scenario:(Cenário) example
+- Given (Dado) produto tem o estoque nivel 10
+- When (Quando) A quantidade do carrinho mudar para 2
+- Then (Então) A quantidade do nível do estoque muda para 8
 
 ---
 
-- Scenario: example 2
-- Given produto tem o estoque nivel 8
-- When A quantidade do carrinho mudar para -1
-- Then A quantidade do nível do estoque muda para 9
+- Scenario:(Cenário) example 2
+- Given (Dado) produto tem o estoque nivel 8
+- When (Quando) A quantidade do carrinho mudar para -1
+- Then (Então) A quantidade do nível do estoque muda para 9
 
 É possível usar assim:
 
 - SCENARIO OUTLINE:
-- Given produto tem o estoque nivel `<inicio>`
-- When A quantidade do carrinho mudar para `<carrinho>`
-- Then A quantidade do nível do estoque muda para `<fim>`
+- Given (Dado) o produto tem o estoque nivel `<inicio>`
+- When (Quando) A quantidade do carrinho mudar para `<carrinho>`
+- Then (Então) A quantidade do nível do estoque muda para `<fim>`
 
 EXAMPLES:
 
@@ -289,7 +289,7 @@ Pode ser usado para categorizar um cenário ou funcionalidade
 Exemplo:
 
 @tagdeexemplo
-FEATURE alguma funcionalidade
+FEATURE (Funcionalidade) alguma funcionalidade
 
 @outratag
 @maisumatag
@@ -308,12 +308,12 @@ Os comentários no Gherkin são precedidos pelo simbolo #
 
 ou
 
-- GIVEN alguma condiçao
+- GIVEN (Dado) alguma condiçao
 
 `# algum comentário`
 
-- WHEN alguma ação
-- THEN algum resultado
+- WHEN (Quando) alguma ação
+- THEN (Então) algum resultado
 
 ### Comentários longos com Doc Strings
 
@@ -338,3 +338,29 @@ algum texto de exemplo
 Algum texto de exemplo longo par algum passo
     ```
 ````
+
+### DataTables / Tabelas de Dados
+Usado para fornecer uma lista de valores para um Passo
+
+
+GIVE os seguintes valores
+
+
+## Tradução em Português das Palavras chave
+O Gherkin deve ser utilizado na mesma linguagem que o usuário/especialistas dominam. Por isso o Gherkin foi traduzido em 70 linguagens
+
+Tabela de conversão: 
+
+|  Palavra-chave em Inglês | Palavra-chave em Português                                                |
+| :-------------- | :---------------------------------------------------------------------- |
+| feature         | Funcionalidade,  Característica, Caracteristica                              |
+| background      | Contexto, Cenário de Fundo, Cenario de Fundo, Fundo                           |
+| scenario        | Exemplo, Cenário, Cenario                                                   |
+| scenarioOutline | Esquema do Cenário, Esquema do Cenario, Delineação do Cenário ,Delineacao do Cenario |
+| examples        | Exemplos, Cenários, Cenarios                                                |
+| given           | * , DadoDadaDadosDadas                                                     |
+| when            | * , Quando                                                                 |
+| then            | * , Então, Entao                                                             |
+| and             | * , E                                                                      |
+| but             | * , Mas                                                                    |
+| rule            | Regra                                                                   |

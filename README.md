@@ -141,7 +141,7 @@ Funcionalidade de alto nível de um sistema ou epico. Ela agrupa cenários relac
   Exemplo: "Carrinho de Compras - O usuário deve poder alterar os itens do carrinho , mudar quantidades , limpar o carrinho"
 - Cenários - Lista de cenários de uma feature de um sistema. É uma situação que pode ser testada. Um exemplo concreto que representa uma regra de negócio.
 
-#### Palavra Chave "Scenario"
+#### Palavra Chave "Scenario" / "Cenário"
 
 Um Scenario ou cenário tem 3 características:
 

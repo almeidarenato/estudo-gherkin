@@ -222,3 +222,91 @@ Exemplo:
 - '*' Eu compro banana
 - '*' Eu compro maçã
 - '*' Eu compro laranja
+
+
+### Palavras-chave Secundárias
+
+#### Palavra-chave "Rule"
+Agrupa um ou mais cenários juntos que utilizam a mesma regra de negócio . É um mecanismo simples de agrupamento e opcional. Adicionado no Gherkin 6 então nem sempre estará disponível no cucumber
+
+#### Palavra-chave "Background"
+Serve para evitar a necessidade de repetir um "Given", desde que seja compartilhado entre os cenários.
+
+#### Palavra-chave "Scenario Outline/Examples"
+Permite "rodar" o mesmo cenário multiplas vezes com diferentes combinações de valores
+
+Ao invés de escrever assim: 
+- Scenario: example
+- Given produto tem o estoque nivel 10
+- When A quantidade do carrinho mudar para 2
+- Then A quantidade do nível do estoque muda para 8
+---
+- Scenario: example 2
+- Given produto tem o estoque nivel 8
+- When A quantidade do carrinho mudar para -1
+- Then A quantidade do nível do estoque muda para 9
+
+É possível usar assim: 
+
+- SCENARIO OUTLINE: 
+- Given produto tem o estoque nivel ```<inicio>```
+- When A quantidade do carrinho mudar para ```<carrinho>```
+- Then A quantidade do nível do estoque muda para ```<fim>```
+
+EXAMPLES:
+``````
+|inicio  | carrinho | fim  |
+|  10    |     2    | 8    |
+|  9     |    -1    | 10   |
+``````
+
+#### Palavra-chave @ Tag
+
+Pode ser usado para categorizar um cenário ou funcionalidade 
+
+Exemplo: 
+
+@tagdeexemplo
+FEATURE alguma funcionalidade
+
+@outratag
+@maisumatag
+SCENARIO ...
+GIVEN ...
+
+Importante: A palavra @ignore é reservada , o cucumber irá ignorar esse cenário
+
+
+### Comentários no Gherkin
+Os comentários no Gherkin são precedidos pelo simbolo #
+
+```# algum comentário```
+- FEATURE alguma funcionalidade
+
+ou 
+
+- GIVEN alguma condiçao
+```# algum comentário```
+- WHEN alguma ação
+- THEN algum resultado
+
+### Comentários longos com Doc Strings
+Os DOC Strings são usados para comentários longos e devem ficar em volta de 3x """ (aspas duplas) ou 3 acentos invertidos ```
+
+(no markdown pode aparecer um espaço antes do ``` para que o caractere  apareça apenas sem formatar o texto ) 
+
+``` 
+ """   
+algum texto de exemplo
+=========================
+Algum texto de exemplo longo par algum passo 
+ """   
+```
+ou
+``` 
+    ```
+algum texto de exemplo
+=========================
+Algum texto de exemplo longo par algum passo 
+    ```
+```

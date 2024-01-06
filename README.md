@@ -6,6 +6,8 @@ repositorio onde reuni anotações sobre estudo de gherkin e BDD
 
 ## BDD - Behaviour Driven Development
 
+Gherkin é uma abordagem estruturada para montagem de testes de comportamento , também conhecido como BDD. Ao invés de testar pequenos pedaços de código, os testes de comportamento seguem o fluxo do usuário como se logar, fazer o checkout. O foco é em como o usuário interage com o sistema.
+
 Encoraja colaboração entre times
 
 Ajuda a obter entendimento compartilhado do problema
@@ -87,6 +89,22 @@ Traduzindo para o Gherkin usando as palavras chaves :
 |   Ação    |        Clicar no botão de comprar         |  When   |
 | Resultado | Produto Adicionado ao Carrinho de Compras |  Then   |
 
+Scenario -> Given -> When -> Then 
+
+- Scenario (Cenário) : Todas as ações que um usuario pode tomar (incluindo caminhos felizes/ruins)
+- Given: (Dado) É o contexto. Qual a página o usuário está? Ele está logado? Ele é o admin? Ele criou uma campanha?
+- When: (Quando) Que ação o usuário está tomando? Qual evento ocorreu?
+- Then: (Então) Oque o sistema deve responder para a ação feita? 
+Qual o resultado esperado? 
+
+**Exemplo:**
+Um usuário quer acessar o dashboard do Mailchimp
+- Cenário: Como usuário do Mailchimp , Eu quero acessar minha conta para trabalhar.
+- Given: Ele está na página de login
+- When : Quando ele digitar suas credenciais corretas e clicar em "Autenticar"
+- Then: Leve para o Dashboard com os dados preenchidos dele.
+
+
 ## Testando com Gherkin
 
 Apesar dele estar vinculado ao Cucumber para permitir o teste automatizado ele pode ser feito de forma Manual.
@@ -113,15 +131,15 @@ Fontes :
 
 O Gherkin é um conjunto de regras gramáticas estruturadas em uma forma determinada. Construída em uma linguagem de fácil entendimento .
 
-Palavra Chave  "Feature" - 
+#### Palavra Chave  "Feature" 
 Funcionalidade de alto nível de um sistema ou epico. Ela agrupa cenários relacionados. Ela possui 3 características: 
 - Sumario - Exemplo "Checkout", "Carrinho de Compras" ,   "Autenticação" , "Funcionalidade#112"
 - Descrição - Descrição que provê mais detalhes de uma funcionalidade. 
 Exemplo: "Carrinho de Compras - O usuário deve poder alterar os itens do carrinho , mudar quantidades , limpar o carrinho"
 - Cenários  - Lista de cenários de uma feature de um sistema. É uma situação que pode ser testada. Um exemplo concreto que representa uma regra de negócio.
 
-### Cenários
-Um cenário tem 3 características:  
+#### Palavra Chave  "Scenario"  
+Um Scenario ou cenário tem 3 características:  
  - Sumário - Exemplos de um sumário para um cenário:
 
    - "O usuário pode ver os detalhes de um produto"
@@ -143,3 +161,64 @@ Um cenário tem 3 características:
 
  - Lista de Passos
 
+Um cenário deve conter uma lista de passos para validar um sistema
+Os passos dentro do cenário deverão conter outras palavras chaves do Gherkin.
+
+### Palavra-chave "Given" / "Dado"
+Usado para descrever o contexto inicial do cenário. Geralmente algo que ocorreu no passado.
+
+Exemplo: 
+- Given Eu estou logado
+- Given Eu estou com um produto no carrinho 
+- Given Eu tenho um saldo de 20
+- Given Eu sou um usuário registrado
+
+### Palavra-chave "When" / "Quando"
+Descreve o evento ou a ação .
+Acionado por um Ator (uma pessoa interagindo com o sistema ou outro sistema)
+
+Exemplo: 
+- When (Quando) Eu clico no botão de login
+- When (Quando) Eu clico em adicionar o carrinho
+- When (Quando) Eu clico em finalizar a compra
+- When (Quando) Eu pressiono o botão de limpar
+- When (Quando) Eu recebo a quantia em créditos 
+
+### Palavra-chave "Then" / "Então"
+Descreve o resultado, ou a saída esperada.
+Deve ser uma saída observável , algo que seja visível para o usuário (uma saída na interface do usuário, um alerta ou um email)
+Não deve ser escondido (como uma alteração na base de dados)
+
+- Then (Então) Um e-mail é enviado
+- Then (Então) Um alerta aparece na tela
+- Then (Então) Um produto é removido do carrinho
+- Then (Então) A quantidade do produto é atualizada
+- Then (Então) Um produto é adicionado ao carrinho
+
+### Palavra-chave "And" / "E"
+usado quando temos multiplos "Given", "When" ou "Then" 
+Exemplo: 
+(ao invés de repetir o "Given")
+- Given Alguma coisa
+- And outra coisa
+- And mais outra coisa
+
+### Palavra-chave "But" / "Más"
+Usado quando o resultado implica em algo negativo 
+
+- Then (Então) um resultado esperado
+- But (Más) um resultado que não deve ocorrer
+
+Exemplo: 
+- Then (Então) o controle está em modo de edição
+- And (e) o botão de salvar está visível
+- But (Más) o botão de editar não está visível
+
+### Palavra-chave "*" 
+Usado para uma lista de coisas extensa. É opcional e pode ser usado ao invés de "And".
+
+Exemplo: 
+- Given Eu estou numa loja de conveniencia
+- '*' Eu compro banana
+- '*' Eu compro maçã
+- '*' Eu compro laranja

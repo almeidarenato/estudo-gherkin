@@ -1,4 +1,4 @@
-# Estudo sobre gherkin
+# Estudo sobre Gherkin
 
 repositorio onde reuni anotações sobre estudo de gherkin e BDD
 
@@ -134,7 +134,7 @@ O Gherkin é um conjunto de regras gramáticas estruturadas em uma forma determi
 
 #### Palavra Chave "Feature" / "Funcionalidade", "Característica"
 
-Funcionalidade de alto nível de um sistema ou epico.  Ela agrupa cenários relacionados a serem testados em um unico arquivo. 
+Funcionalidade de alto nível de um sistema ou epico. Ela agrupa cenários relacionados a serem testados em um unico arquivo.
 Ela aparece apenas 1 vez no topo do arquivo , pode conter uma descrição opcional.
 Ela possui 3 características:
 
@@ -252,19 +252,21 @@ Agrupa um ou mais cenários juntos que utilizam a mesma regra de negócio . É u
 Serve para evitar a necessidade de repetir um "Given"/"Dado", desde que seja compartilhado entre os cenários.
 Exemplo
 
-Ao invés de 
+Ao invés de
 
 - Cenário exemplo
 - Dado Eu estou logado
 - E eu tenho permissões de acessar
 - Quando ...
+
 ---
+
 - Cenário exemplo 2
 - Dado Eu estou logado
 - E eu tenho permissões de acessar
 - Quando ...
 
-É possível usar 
+É possível usar
 
 - Contexto:
 - Dado Eu estou logado
@@ -275,7 +277,6 @@ Ao invés de
 
 - Cenário Exemplo 2
 - Quando ...
-
 
 #### Palavra-chave "Scenario Outline/Examples" / "Esquema do Cenário", "Exemplo", "Delineação do Cenário"
 
@@ -368,40 +369,41 @@ Algum texto de exemplo longo par algum passo
 ````
 
 ### DataTables / Tabelas de Dados
+
 Usado para fornecer uma lista de valores para um Passo
 (Pode ser usado em qualquer passo)
 
-GIVEN (Dado) os seguintes valores: 
+GIVEN (Dado) os seguintes valores:
+
 ```
- | Produto    | Estoque  | Carrinho  | 
+ | Produto    | Estoque  | Carrinho  |
  |   tv       |   1      |  1        |
  | frigideira |   10     |  1        |
- 
+
 ```
 
-
 ## Tradução em Português das Palavras chave
+
 O Gherkin deve ser utilizado na mesma linguagem que o usuário/especialistas dominam. Por isso o Gherkin foi traduzido em 70 linguagens
 deve-se utilizar a palavra chanve #language seguido do código iso da linguagem desejada exemplo: PT
 
 #language: pt
 
-Tabela de conversão: 
+Tabela de conversão:
 
-|  Palavra-chave em Inglês | Palavra-chave em Português                                                |
-| :-------------- | :---------------------------------------------------------------------- |
-| feature         | Funcionalidade,  Característica, Caracteristica                              |
-| background      | Contexto, Cenário de Fundo, Cenario de Fundo, Fundo                           |
-| scenario        | Exemplo, Cenário, Cenario                                                   |
-| scenarioOutline | Esquema do Cenário, Esquema do Cenario, Delineação do Cenário ,Delineacao do Cenario |
-| examples        | Exemplos, Cenários, Cenarios                                                |
-| given           | * , DadoDadaDadosDadas                                                     |
-| when            | * , Quando                                                                 |
-| then            | * , Então, Entao                                                             |
-| and             | * , E                                                                      |
-| but             | * , Mas                                                                    |
-| rule            | Regra                                                                   |
-
+| Palavra-chave em Inglês | Palavra-chave em Português                                                           |
+| :---------------------- | :----------------------------------------------------------------------------------- |
+| feature                 | Funcionalidade, Característica, Caracteristica                                       |
+| background              | Contexto, Cenário de Fundo, Cenario de Fundo, Fundo                                  |
+| scenario                | Exemplo, Cenário, Cenario                                                            |
+| scenarioOutline         | Esquema do Cenário, Esquema do Cenario, Delineação do Cenário ,Delineacao do Cenario |
+| examples                | Exemplos, Cenários, Cenarios                                                         |
+| given                   | \* , DadoDadaDadosDadas                                                              |
+| when                    | \* , Quando                                                                          |
+| then                    | \* , Então, Entao                                                                    |
+| and                     | \* , E                                                                               |
+| but                     | \* , Mas                                                                             |
+| rule                    | Regra                                                                                |
 
 ## Regras/ Sintaxe das Palavras Chave
 

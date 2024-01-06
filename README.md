@@ -134,10 +134,12 @@ O Gherkin é um conjunto de regras gramáticas estruturadas em uma forma determi
 
 #### Palavra Chave "Feature" / "Funcionalidade", "Característica"
 
-Funcionalidade de alto nível de um sistema ou epico. Ela agrupa cenários relacionados. Ela possui 3 características:
+Funcionalidade de alto nível de um sistema ou epico.  Ela agrupa cenários relacionados a serem testados em um unico arquivo. 
+Ela aparece apenas 1 vez no topo do arquivo , pode conter uma descrição opcional.
+Ela possui 3 características:
 
 - Sumario - Exemplo "Checkout", "Carrinho de Compras" , "Autenticação" , "Funcionalidade#112"
-- Descrição - Descrição que provê mais detalhes de uma funcionalidade.
+- Descrição - Descrição que provê mais detalhes de uma funcionalidade. (Opcional)
   Exemplo: "Carrinho de Compras - O usuário deve poder alterar os itens do carrinho , mudar quantidades , limpar o carrinho"
 - Cenários - Lista de cenários de uma feature de um sistema. É uma situação que pode ser testada. Um exemplo concreto que representa uma regra de negócio.
 
@@ -248,6 +250,32 @@ Agrupa um ou mais cenários juntos que utilizam a mesma regra de negócio . É u
 #### Palavra-chave "Background" / "Contexto", "Cenário de Fundo"
 
 Serve para evitar a necessidade de repetir um "Given"/"Dado", desde que seja compartilhado entre os cenários.
+Exemplo
+
+Ao invés de 
+
+- Cenário exemplo
+- Dado Eu estou logado
+- E eu tenho permissões de acessar
+- Quando ...
+---
+- Cenário exemplo 2
+- Dado Eu estou logado
+- E eu tenho permissões de acessar
+- Quando ...
+
+É possível usar 
+
+- Contexto:
+- Dado Eu estou logado
+- E eu tenho permissões de acessar
+
+- Cenário Exemplo 1
+- Quando ...
+
+- Cenário Exemplo 2
+- Quando ...
+
 
 #### Palavra-chave "Scenario Outline/Examples" / "Esquema do Cenário", "Exemplo", "Delineação do Cenário"
 
@@ -269,7 +297,7 @@ Ao invés de escrever assim:
 
 É possível usar assim:
 
-- SCENARIO OUTLINE:
+- SCENARIO OUTLINE: (Esquema do Cenário)
 - Given (Dado) o produto tem o estoque nivel `<inicio>`
 - When (Quando) A quantidade do carrinho mudar para `<carrinho>`
 - Then (Então) A quantidade do nível do estoque muda para `<fim>`
@@ -341,13 +369,22 @@ Algum texto de exemplo longo par algum passo
 
 ### DataTables / Tabelas de Dados
 Usado para fornecer uma lista de valores para um Passo
+(Pode ser usado em qualquer passo)
 
-
-GIVE os seguintes valores
+GIVEN (Dado) os seguintes valores: 
+```
+ | Produto    | Estoque  | Carrinho  | 
+ |   tv       |   1      |  1        |
+ | frigideira |   10     |  1        |
+ 
+```
 
 
 ## Tradução em Português das Palavras chave
 O Gherkin deve ser utilizado na mesma linguagem que o usuário/especialistas dominam. Por isso o Gherkin foi traduzido em 70 linguagens
+deve-se utilizar a palavra chanve #language seguido do código iso da linguagem desejada exemplo: PT
+
+#language: pt
 
 Tabela de conversão: 
 
@@ -364,3 +401,9 @@ Tabela de conversão:
 | and             | * , E                                                                      |
 | but             | * , Mas                                                                    |
 | rule            | Regra                                                                   |
+
+
+## Regras/ Sintaxe das Palavras Chave
+
+As palavras chave sempre precisam estar no começo da frase.
+As palavras chave não podem ter duas palavras seguidas da outra, apenas 1 por linha.

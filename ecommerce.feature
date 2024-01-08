@@ -11,6 +11,26 @@ Funcionalidade: Como cliente eu devo poder editar os itens do meu carrinho de co
               E eu devo visualizar uma mensagem
               E o nível de estoque é reduzido por 1
 
+        Cenário: Como usuário eu devo conseguir me autenticar na minha conta usando minhas credenciais
+            Dado o usuário estar na página de login
+              E o botão de login está sendo mostrado
+             Quando o usuário informar  o seu usuário correto
+              E o usuário informar a senha correta
+              E o usuário clicar no botão de login
+             Então o usuário deve conseguir entrar na página da sua conta
+              E deve visualizar as suas informações
+
+        # como um cliente eu devo conseguir criar uma conta se eu informar um usuario, senha , clicar em registrar. Eu devo ser levado a página de minha conta
+        Cenário: Como cliente eu devo conseguir criar uma conta
+            Dado o cliente está acessando a página de cadastro de nova conta
+              E o botão de registro está sendo exibido
+             Quando o cliente informar o nome de usuário
+              E o cliente informar uma senha
+              E o cliente clicar em registrar
+             Então o usuário deverá ser cadastrado com as informações fornecidas com uma mensagem de sucesso
+              E ser redirecionado para a página de minha conta
+
+        
         # produto não possui estoque  e não está no carrinho
         Cenário: Como cliente eu não posso incluir um item no meu carrinho se ele não possui estoque
             Dado eu estar na página de detalhes do produto

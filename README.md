@@ -416,5 +416,15 @@ Online:
 https://app.specflow.org/gherkin-editor
 
 Extensão no VSCode:
-Name: Snippets and Syntax Highlight for Gherkin (Cucumber)
-VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=stevejpurves.cucumber
+- Name: Snippets and Syntax Highlight for Gherkin (Cucumber)
+- VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=stevejpurves.cucumber
+
+## Palavras-chave X Framework de Testes Unitários
+
+As palavras chave do Gherkin podem ser equiparadas a algumas  funções bem comuns encontradas nos frameworks de testes unitários
+
+| palavra-chave | teste unitário |
+| :------------ | :----- |
+| Given (dado)  | setup  |
+| When (quando) | act    |
+| Then (então)  | assert |

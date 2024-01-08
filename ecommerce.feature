@@ -4,8 +4,12 @@ Funcionalidade: Como cliente eu devo poder editar os itens do meu carrinho de co
 
         Cenário: Como cliente eu posso adicionar um item no meu carrinho de compras
             Dado eu estar na página de detalhes do produto
+              E o produto possui estoque
+              E esse produto não está no carrinho
              Quando eu clicar em adicionar ao carrinho
              Então o produto é adicionado ao carrinho
+              E eu devo visualizar uma mensagem
+              E o nível de estoque é reduzido por 1
         
         Cenário: Como cliente eu posso remover um item do meu carrinho de compras
             Dado eu estar na página de carrinho de produto

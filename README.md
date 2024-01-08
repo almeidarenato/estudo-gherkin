@@ -409,3 +409,12 @@ Tabela de conversão:
 
 As palavras chave sempre precisam estar no começo da frase.
 As palavras chave não podem ter duas palavras seguidas da outra, apenas 1 por linha.
+
+## Ferramentas para uso do Gherkin
+
+Online:
+https://app.specflow.org/gherkin-editor
+
+Extensão no VSCode:
+Name: Snippets and Syntax Highlight for Gherkin (Cucumber)
+VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=stevejpurves.cucumber

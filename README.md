@@ -398,7 +398,7 @@ Tabela de conversão:
 | scenario                | Exemplo, Cenário, Cenario                                                            |
 | scenarioOutline         | Esquema do Cenário, Esquema do Cenario, Delineação do Cenário ,Delineacao do Cenario |
 | examples                | Exemplos, Cenários, Cenarios                                                         |
-| given                   | \* , DadoDadaDadosDadas                                                              |
+| given                   | \* , Dado, Dada, Dados, Dadas                                                              |
 | when                    | \* , Quando                                                                          |
 | then                    | \* , Então, Entao                                                                    |
 | and                     | \* , E                                                                               |

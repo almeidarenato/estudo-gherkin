@@ -145,7 +145,7 @@ Ela possui 3 características:
 
 #### Palavra Chave "Scenario" / "Cenário"
 
-Um Scenario ou cenário tem 3 características:
+Um Scenario ou cenário tem 3 propriedades principais:
 
 - Sumário - Exemplos de um sumário para um cenário:
 
@@ -170,6 +170,8 @@ Um Scenario ou cenário tem 3 características:
 
 Um cenário deve conter uma lista de passos para validar um sistema
 Os passos dentro do cenário deverão conter outras palavras chaves do Gherkin.
+
+Um cenário não pode depender do resultado de outros cenários para funcionar , portanto ele deve ser Independente e Stateless. Os testes podem ser rodados individualmente, sem uma ordem específica. 
 
 ### Palavra-chave "Given" / "Dado", "Dada", "Dados", "Dadas"
 

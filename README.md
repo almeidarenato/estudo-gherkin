@@ -5,21 +5,24 @@ repositorio onde reuni anotações sobre estudo de gherkin e BDD
 # Gherkin
 
 ## BDD - Behaviour Driven Development
+O Gherkin é uma linguage descritiva com palavras reservadas , usada para escrever as funcionalidades / cenários de um sistema.
 
-Gherkin é uma abordagem estruturada para montagem de testes de comportamento , também conhecido como BDD. Ao invés de testar pequenos pedaços de código, os testes de comportamento seguem o fluxo do usuário como se logar, fazer o checkout. O foco é em como o usuário interage com o sistema.
+Essa abordagem estruturada serve para montagem de testes de comportamento , também conhecido como BDD. 
+Ao invés de testar pequenos pedaços de código, os testes de comportamento seguem um fluxo de usuário como por exemplo: se logar, se cadastrar, adicionar produtos no carrinho, fazer o checkout. 
+O foco é em como o usuário interage com o sistema.
 
 Encoraja colaboração entre times
-
 Ajuda a obter entendimento compartilhado do problema
 
 Pequenas e rápidas interações para ter conseguir rápidos retornos
 
 Produz documentação compatível com o comportamento do sistema
 
+
 ## Cucumber
 
-Programa Opensource que suporte BDD
-
+Ferramenta Opensource .
+Ela interpreta o cenário escrito em Gherkin e executar a automação de testes. 
 Ofere formas de escrever cenários/ testes que qualquer um entenda
 
 Disponível em diversas linguagens

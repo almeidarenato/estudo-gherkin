@@ -1,6 +1,7 @@
 #Language: pt
 
-Funcionalidade: Como cliente eu devo poder editar os itens do meu carrinho de compras, quantidades e finalizar a compra
+Funcionalidade: Interações com Carrinho de Compras
+Como um cliente eu quero poder editar os itens do meu carrinho de compras, quantidades para que eu possa ajustar minha compra antes de finaliza-la.
         
         Cenário: Como cliente eu posso adicionar um item no meu carrinho de compras
             Dado eu estar na página de detalhes do produto
@@ -19,12 +20,12 @@ Funcionalidade: Como cliente eu devo poder editar os itens do meu carrinho de co
               * o usuário clicar no botão de login
              Então o usuário deve conseguir entrar na página da sua conta
               E deve visualizar as suas informações
-              
+
         Cenário: Como cliente eu devo conseguir aplicar um cupom de desconto válido
             Dado o usuário estar visualizando o carrinho de compras
-            * Produto A
-            * Produto B
-            * Produto C
+             * Produto A
+             * Produto B
+             * Produto C
              Quando eu aplicar o cupom de desconto
              Então o desconto é validado
               E o preço é atualizado

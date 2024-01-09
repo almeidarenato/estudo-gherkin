@@ -15,8 +15,8 @@ Funcionalidade: Como cliente eu devo poder editar os itens do meu carrinho de co
             Dado o usuário estar na página de login
               E o botão de login está sendo mostrado
              Quando o usuário informar  o seu usuário correto
-              E o usuário informar a senha correta
-              E o usuário clicar no botão de login
+              * o usuário informar a senha correta
+              * o usuário clicar no botão de login
              Então o usuário deve conseguir entrar na página da sua conta
               E deve visualizar as suas informações
 

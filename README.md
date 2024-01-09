@@ -43,6 +43,7 @@ Amplamente usado por profissionais de testes
 
 Amplamente usado por Analistas de Negócio
 
+
 ## Coleta e Análise de Requisitos
 
 Normalmente a coleta de requisitos é feita de forma bastante informal e desorganizada
@@ -75,10 +76,17 @@ Para fazer uma "User Story" de sucesso precisamos saber :
 - Ação - Oque deve ser feito (ex.: O usuário clica no botão)
 - Resultado - Oque deverá ocorrer
 
-Exemplo de cenário
+## Cenário de teste 
+É o item menos detalhado para descrever o teste.
+
+Exemplo de cenário de teste
 Qual será a chamada para a ação (CTA)? É um botão ?
 Um Consumidor deve clicar em um botão no site
 Qual o papel/ator ? Consumidor
+
+## Caso de teste
+
+Item mais detalhado em um teste. É uma ideia mais específica.
 
 História do Usuário / User Story :
 Um Consumidor clicar no botão de compra na página do produto e o produto é adicionado ao carrinho de compras
@@ -144,6 +152,12 @@ Ela possui 3 características:
 - Sumario - Exemplo "Checkout", "Carrinho de Compras" , "Autenticação" , "Funcionalidade#112"
 - Descrição - Descrição que provê mais detalhes de uma funcionalidade. (Opcional)
   Exemplo: "Carrinho de Compras - O usuário deve poder alterar os itens do carrinho , mudar quantidades , limpar o carrinho"
+  - Recomendações quanto a descrição:
+A Descrição idealmente pode seguir a eguinte estrutura:
+    - **Como um(a)** ....
+    - **Eu quero** ...
+    - **Para que então** ...
+
 - Cenários - Lista de cenários de uma feature de um sistema. É uma situação que pode ser testada. Um exemplo concreto que representa uma regra de negócio.
 
 #### Palavra Chave "Scenario" / "Cenário"

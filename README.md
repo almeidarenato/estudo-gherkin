@@ -153,10 +153,14 @@ Ela possui 3 características:
 - Descrição - Descrição que provê mais detalhes de uma funcionalidade. (Opcional)
   Exemplo: "Carrinho de Compras - O usuário deve poder alterar os itens do carrinho , mudar quantidades , limpar o carrinho"
   - Recomendações quanto a descrição:
-A Descrição idealmente pode seguir a eguinte estrutura:
-    - **Como um(a)** ....
-    - **Eu quero** ...
-    - **Para que então** ...
+A Descrição idealmente pode seguir a eguinte estrutura (Centralizada no Papel/Role Centric)
+    - **Como um(a)** .... (cliente, usuário, consumidor)
+    - **Eu quero** ...(editar, visualizar.., clicar)
+    - **Para que então** ... (eu possa ter, possa obter)
+  - Ou eu podemos seguir outra estrutura (Centralizada no Resultado / Result Centric)
+    - **Para que então**
+    - **Como um(a)**
+    - **Eu quero**
 
 - Cenários - Lista de cenários de uma feature de um sistema. É uma situação que pode ser testada. Um exemplo concreto que representa uma regra de negócio.
 

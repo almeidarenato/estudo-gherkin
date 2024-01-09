@@ -19,6 +19,15 @@ Funcionalidade: Como cliente eu devo poder editar os itens do meu carrinho de co
               * o usuário clicar no botão de login
              Então o usuário deve conseguir entrar na página da sua conta
               E deve visualizar as suas informações
+              
+        Cenário: Como cliente eu devo conseguir aplicar um cupom de desconto válido
+            Dado o usuário estar visualizando o carrinho de compras
+            * Produto A
+            * Produto B
+            * Produto C
+             Quando eu aplicar o cupom de desconto
+             Então o desconto é validado
+              E o preço é atualizado
 
         # como um cliente eu devo conseguir criar uma conta se eu informar um usuario, senha , clicar em registrar. Eu devo ser levado a página de minha conta
         Cenário: Como cliente eu devo conseguir criar uma conta

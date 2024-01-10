@@ -2,11 +2,17 @@
 
 Funcionalidade: Interações com Carrinho de Compras
 Como um cliente eu quero poder editar os itens do meu carrinho de compras, quantidades para que eu possa ajustar minha compra antes de finaliza-la.
+        Contexto:
+            Dado o produto "X" possui estoque "2"
+              E o produto "Y" possui estoque "0"
+              E esse produto "Z" possui o estque "2"
+              E o produto "X" possui a quantidade "0" no carrinho
+              E o produto "Y" possui a quantidade "0" no carrinho
+              E o produto "Z" possui a quantidade "1" no carrinho
+         
         
         Cenário: Como cliente eu posso adicionar um item no meu carrinho de compras
             Dado eu estar na página de detalhes do produto do produto "X"
-              E o produto "X" possui estoque "1"
-              E esse produto "X" possui quantidade "0" no carrinho
              Quando eu clicar em adicionar ao carrinho
              Então o produto "X" é adicionado a quantidade de "1"
               E eu devo visualizar uma mensagem
@@ -23,9 +29,9 @@ Como um cliente eu quero poder editar os itens do meu carrinho de compras, quant
 
         Cenário: Como cliente eu devo conseguir aplicar um cupom de desconto válido
             Dado o usuário estar visualizando o carrinho de compras
-             * Produto A
-             * Produto B
-             * Produto C
+             * Produto "X"
+             * Produto "Y"
+             * Produto "Z"
              Quando eu aplicar o cupom de desconto
              Então o desconto é validado
               E o preço é atualizado

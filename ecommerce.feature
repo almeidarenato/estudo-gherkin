@@ -4,13 +4,13 @@ Funcionalidade: Interações com Carrinho de Compras
 Como um cliente eu quero poder editar os itens do meu carrinho de compras, quantidades para que eu possa ajustar minha compra antes de finaliza-la.
         
         Cenário: Como cliente eu posso adicionar um item no meu carrinho de compras
-            Dado eu estar na página de detalhes do produto
-              E o produto possui estoque
-              E esse produto não está no carrinho
+            Dado eu estar na página de detalhes do produto do produto "X"
+              E o produto "X" possui estoque "1"
+              E esse produto "X" possui quantidade "0" no carrinho
              Quando eu clicar em adicionar ao carrinho
-             Então o produto é adicionado ao carrinho
+             Então o produto "X" é adicionado a quantidade de "1"
               E eu devo visualizar uma mensagem
-              E o nível de estoque é reduzido por 1
+              E o nível de estoque do produto "X" deve se tornar "0"
 
         Cenário: Como usuário eu devo conseguir me autenticar na minha conta usando minhas credenciais
             Dado o usuário estar na página de login

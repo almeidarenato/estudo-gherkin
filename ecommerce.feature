@@ -2,13 +2,20 @@
 
 Funcionalidade: Interações com Carrinho de Compras
 Como um cliente eu quero poder editar os itens do meu carrinho de compras, quantidades para que eu possa ajustar minha compra antes de finaliza-la.
+        
         Contexto:
-            Dado o produto "X" possui estoque "2"
-              E o produto "Y" possui estoque "0"
-              E esse produto "Z" possui o estque "2"
-              E o produto "X" possui a quantidade "0" no carrinho
-              E o produto "Y" possui a quantidade "0" no carrinho
-              E o produto "Z" possui a quantidade "1" no carrinho
+            Dado eu tenho os seguintes dados:
+                  | Produto | Estoque | Carrinho |
+                  | X       | 2       | 0        |
+                  | Y       | 0       | 1        |
+                  | Z       | 2       | 1        |
+            # Outra forma de adicionar as informações sem data tables
+            # Dado o produto "X" possui estoque "2"
+            #   E o produto "Y" possui estoque "0"
+            #   E esse produto "Z" possui o estque "2"
+            #   E o produto "X" possui a quantidade "0" no carrinho
+            #   E o produto "Y" possui a quantidade "0" no carrinho
+            #   E o produto "Z" possui a quantidade "1" no carrinho
          
         
         Cenário: Como cliente eu posso adicionar um item no meu carrinho de compras

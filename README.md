@@ -5,10 +5,11 @@ repositorio onde reuni anotações sobre estudo de gherkin e BDD
 # Gherkin
 
 ## BDD - Behaviour Driven Development
+
 O Gherkin é uma linguage descritiva com palavras reservadas , usada para escrever as funcionalidades / cenários de um sistema.
 
-Essa abordagem estruturada serve para montagem de testes de comportamento , também conhecido como BDD. 
-Ao invés de testar pequenos pedaços de código, os testes de comportamento seguem um fluxo de usuário como por exemplo: se logar, se cadastrar, adicionar produtos no carrinho, fazer o checkout. 
+Essa abordagem estruturada serve para montagem de testes de comportamento , também conhecido como BDD.
+Ao invés de testar pequenos pedaços de código, os testes de comportamento seguem um fluxo de usuário como por exemplo: se logar, se cadastrar, adicionar produtos no carrinho, fazer o checkout.
 O foco é em como o usuário interage com o sistema.
 
 Encoraja colaboração entre times
@@ -18,11 +19,10 @@ Pequenas e rápidas interações para ter conseguir rápidos retornos
 
 Produz documentação compatível com o comportamento do sistema
 
-
 ## Cucumber
 
 Ferramenta Opensource .
-Ela interpreta o cenário escrito em Gherkin e executar a automação de testes. 
+Ela interpreta o cenário escrito em Gherkin e executar a automação de testes.
 Ofere formas de escrever cenários/ testes que qualquer um entenda
 
 Disponível em diversas linguagens
@@ -42,7 +42,6 @@ Essencial ao aplicar BDD/ Cucumber
 Amplamente usado por profissionais de testes
 
 Amplamente usado por Analistas de Negócio
-
 
 ## Coleta e Análise de Requisitos
 
@@ -76,7 +75,8 @@ Para fazer uma "User Story" de sucesso precisamos saber :
 - Ação - Oque deve ser feito (ex.: O usuário clica no botão)
 - Resultado - Oque deverá ocorrer
 
-## Cenário de teste 
+## Cenário de teste
+
 É o item menos detalhado para descrever o teste.
 
 Exemplo de cenário de teste
@@ -152,15 +152,13 @@ Ela possui 3 características:
 - Sumario - Exemplo "Checkout", "Carrinho de Compras" , "Autenticação" , "Funcionalidade#112"
 - Descrição - Descrição que provê mais detalhes de uma funcionalidade. (Opcional)
   Exemplo: "Carrinho de Compras - O usuário deve poder alterar os itens do carrinho , mudar quantidades , limpar o carrinho"
+
   - Recomendações quanto a descrição:
-A Descrição idealmente pode seguir a eguinte estrutura (Centralizada no Papel/Role Centric)
-    - **Como um(a)** .... (cliente, usuário, consumidor)
-    - **Eu quero** ...(editar, visualizar.., clicar)
-    - **Para que então** ... (eu possa ter, possa obter)
+    A Descrição idealmente pode seguir a eguinte estrutura (Centralizada no Papel/Role Centric) - As an (**Como um(a)**) .... (cliente, usuário, consumidor) - I want (**Eu quero**) ...(editar, visualizar.., clicar) - In order to (**A fim de , Para que**) ... (eu possa ter, possa obter)
   - Ou eu podemos seguir outra estrutura (Centralizada no Resultado / Result Centric)
-    - **Para que então**
-    - **Como um(a)**
-    - **Eu quero**
+    - In order to (**A fim de**)
+    - As a (**Como um(a)**)
+    - I want to (**Eu quero**)
 
 - Cenários - Lista de cenários de uma feature de um sistema. É uma situação que pode ser testada. Um exemplo concreto que representa uma regra de negócio.
 
@@ -192,7 +190,7 @@ Um Scenario ou cenário tem 3 propriedades principais:
 Um cenário deve conter uma lista de passos para validar um sistema
 Os passos dentro do cenário deverão conter outras palavras chaves do Gherkin.
 
-Um cenário não pode depender do resultado de outros cenários para funcionar , portanto ele deve ser Independente e Stateless. Os testes podem ser rodados individualmente, sem uma ordem específica. 
+Um cenário não pode depender do resultado de outros cenários para funcionar , portanto ele deve ser Independente e Stateless. Os testes podem ser rodados individualmente, sem uma ordem específica.
 
 ### Palavra-chave "Given" / "Dado", "Dada", "Dados", "Dadas"
 
@@ -421,7 +419,7 @@ Tabela de conversão:
 | scenario                | Exemplo, Cenário, Cenario                                                            |
 | scenarioOutline         | Esquema do Cenário, Esquema do Cenario, Delineação do Cenário ,Delineacao do Cenario |
 | examples                | Exemplos, Cenários, Cenarios                                                         |
-| given                   | \* , Dado, Dada, Dados, Dadas                                                              |
+| given                   | \* , Dado, Dada, Dados, Dadas                                                        |
 | when                    | \* , Quando                                                                          |
 | then                    | \* , Então, Entao                                                                    |
 | and                     | \* , E                                                                               |
@@ -439,15 +437,16 @@ Online:
 https://app.specflow.org/gherkin-editor
 
 Extensão no VSCode:
+
 - Name: Snippets and Syntax Highlight for Gherkin (Cucumber)
 - VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=stevejpurves.cucumber
 
 ## Palavras-chave X Framework de Testes Unitários
 
-As palavras chave do Gherkin podem ser equiparadas a algumas  funções bem comuns encontradas nos frameworks de testes unitários
+As palavras chave do Gherkin podem ser equiparadas a algumas funções bem comuns encontradas nos frameworks de testes unitários
 
 | palavra-chave | teste unitário |
-| :------------ | :----- |
-| Given (dado)  | setup  |
-| When (quando) | act    |
-| Then (então)  | assert |
+| :------------ | :------------- |
+| Given (dado)  | setup          |
+| When (quando) | act            |
+| Then (então)  | assert         |

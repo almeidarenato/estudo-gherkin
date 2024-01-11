@@ -25,10 +25,10 @@ Como um cliente eu quero editar os itens do meu carrinho de compras, quantidades
               E o produto <produto> vai ter a quantidade <quantidade> no carrinho.
               E uma mensagem será exibida ao usuário
         Exemplos:
-                  | produto | estoque | carrinho |
-                  | X       | 1       | 1        |
-                  | Y       | 0       | 0        |
-                  | Z       | 3       | 2        |
+                  | produto | estoque | quantidade |
+                  | X       | 1       | 1          |
+                  | Y       | 0       | 0          |
+                  | Z       | 3       | 2          |
         
         Cenário: Como cliente eu posso adicionar um item no meu carrinho de compras
             Dado eu estar na página de detalhes do produto do produto "X"

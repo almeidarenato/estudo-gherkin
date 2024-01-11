@@ -1,7 +1,7 @@
 #Language: pt
 
 Funcionalidade: Interações com Carrinho de Compras
-Como um cliente eu quero poder editar os itens do meu carrinho de compras, quantidades para que eu possa ajustar minha compra antes de finaliza-la.
+Como um cliente eu quero editar os itens do meu carrinho de compras, quantidades Com o objetivo de poder ajustar minha compra antes de finaliza-la.
         
         Contexto:
             Dado eu tenho os seguintes dados:
@@ -16,7 +16,19 @@ Como um cliente eu quero poder editar os itens do meu carrinho de compras, quant
             #   E o produto "X" possui a quantidade "0" no carrinho
             #   E o produto "Y" possui a quantidade "0" no carrinho
             #   E o produto "Z" possui a quantidade "1" no carrinho
-         
+
+        # formato de otimizar os testes em 1 cenário 
+        Esquema do Cenário: exemplo
+            Dado eu estar na página de detalhes do produto do produto <produto>
+             Quando eu clicar em adicionar ao carrinho
+             Então o produto <produto> vai ter o nível de estoque <estoque>
+              E o produto <produto> vai ter a quantidade <quantidade> no carrinho.
+              E uma mensagem será exibida ao usuário
+        Exemplos:
+                  | produto | estoque | carrinho |
+                  | X       | 1       | 1        |
+                  | Y       | 0       | 0        |
+                  | Z       | 3       | 2        |
         
         Cenário: Como cliente eu posso adicionar um item no meu carrinho de compras
             Dado eu estar na página de detalhes do produto do produto "X"

@@ -41,6 +41,7 @@ Como um cliente eu quero editar os itens do meu carrinho de compras, quantidades
             #   E eu devo visualizar uma mensagem
             #   E o nível de estoque do produto "X" deve se tornar "0"
 
+        @autenticacao
         Cenário: Como usuário eu devo conseguir me autenticar na minha conta usando minhas credenciais
             Dado o usuário estar na página de login
               E o botão de login está sendo mostrado
@@ -60,6 +61,7 @@ Como um cliente eu quero editar os itens do meu carrinho de compras, quantidades
               E o preço é atualizado
 
         # como um cliente eu devo conseguir criar uma conta se eu informar um usuario, senha , clicar em registrar. Eu devo ser levado a página de minha conta
+        @novaconta
         Cenário: Como cliente eu devo conseguir criar uma conta
             Dado o cliente está acessando a página de cadastro de nova conta
               E o botão de registro está sendo exibido

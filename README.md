@@ -334,7 +334,8 @@ EXAMPLES:
 
 #### Palavra-chave @ Tag
 
-Pode ser usado para categorizar um cenário ou funcionalidade
+Pode ser usado para categorizar um cenário ou funcionalidade.
+Ela é mais utilizada pela ferramenta de testes para que uma implementação rode apenas os cenários identificados pela tag informada.
 
 Exemplo:
 
@@ -347,6 +348,8 @@ SCENARIO ...
 GIVEN ...
 
 Importante: A palavra @ignore é reservada , o cucumber irá ignorar esse cenário
+
+
 
 ### Comentários no Gherkin
 

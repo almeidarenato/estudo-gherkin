@@ -7,7 +7,7 @@ Como um cliente eu quero poder editar os itens do meu carrinho de compras, quant
             Dado eu tenho os seguintes dados:
                   | Produto | Estoque | Carrinho |
                   | X       | 2       | 0        |
-                  | Y       | 0       | 1        |
+                  | Y       | 0       | 0        |
                   | Z       | 2       | 1        |
             # Outra forma de adicionar as informações sem data tables
             # Dado o produto "X" possui estoque "2"
@@ -21,9 +21,12 @@ Como um cliente eu quero poder editar os itens do meu carrinho de compras, quant
         Cenário: Como cliente eu posso adicionar um item no meu carrinho de compras
             Dado eu estar na página de detalhes do produto do produto "X"
              Quando eu clicar em adicionar ao carrinho
-             Então o produto "X" é adicionado a quantidade de "1"
-              E eu devo visualizar uma mensagem
-              E o nível de estoque do produto "X" deve se tornar "0"
+             Então o produto "X" terá as seguintes quantidades:
+                  | Estoque | Carrinho |
+                  | 0       | 1        |
+            #  Então o produto "X" é adicionado a quantidade de "1"
+            #   E eu devo visualizar uma mensagem
+            #   E o nível de estoque do produto "X" deve se tornar "0"
 
         Cenário: Como usuário eu devo conseguir me autenticar na minha conta usando minhas credenciais
             Dado o usuário estar na página de login
@@ -56,24 +59,30 @@ Como um cliente eu quero poder editar os itens do meu carrinho de compras, quant
         
         # produto não possui estoque  e não está no carrinho
         Cenário: Como cliente eu não posso incluir um item no meu carrinho se ele não possui estoque
-            Dado eu estar na página de detalhes do produto
-              E o produto não possui estoque
+            Dado eu estar na página de detalhes do produto "Y"
+              E o produto "Y" não possui estoque
               E esse produto não está no carrinho
              Quando eu clicar em adicionar ao carrinho
-             Então eu devo visualizar uma mensagem
-              Mas o produto não é adicionado ao carrinho
-              E o nível de estoque não sofre mudanças
+             Então o produto "Y" possuirá as seguintes quantidades:
+                  | Estoque | Carrinho |
+                  | 0       | 0        |
+            #  Então eu devo visualizar uma mensagem
+            #   Mas o produto não é adicionado ao carrinho
+            #   E o nível de estoque não sofre mudanças
         
         # produto tem estoque e já está no carrinho
         Cenário: Como cliente eu não posso incluir um item no meu carrinho se ele já estiver no carrinho
-            Dado eu estar na página de detalhes do produto
-              E o produto possui estoque
+            Dado eu estar na página de detalhes do produto "Z"
+              E o produto "Z" possui estoque
               E esse produto está no carrinho
              Quando eu clicar em adicionar ao carrinho
-             Então o produto não é adicionado ao carrinho
-              E eu devo visualizar uma mensagem
-              E a quantidade do produto no carrinho deve subir em 1
-              E o nível de estoque é reduzido por 1
+             Então o produto "Z" irá possuir as seguintes quantidades:
+                  | Estoque | Carrinho |
+                  | 1       | 1        |
+            #  Então o produto não é adicionado ao carrinho
+            #   E eu devo visualizar uma mensagem
+            #   E a quantidade do produto no carrinho deve subir em 1
+            #   E o nível de estoque é reduzido por 1
 
 
         Cenário: Como cliente eu posso remover um item do meu carrinho de compras

@@ -21,14 +21,14 @@ Como um cliente eu quero editar os itens do meu carrinho de compras, quantidades
         Esquema do Cenário: exemplo
             Dado eu estar na página de detalhes do produto do produto <produto>
              Quando eu clicar em adicionar ao carrinho
-             Então o produto <produto> vai ter o nível de estoque <estoque>
-              E o produto <produto> vai ter a quantidade <quantidade> no carrinho.
-              E uma mensagem será exibida ao usuário
+             Então o estoque será atualizado para o nível <estoque>
+              E  a quantidade <quantidade> no carrinho.
+              E uma mensagem com o texto <mensagem> será exibida ao usuário
         Exemplos:
-                  | produto | estoque | quantidade |
-                  | X       | 1       | 1          |
-                  | Y       | 0       | 0          |
-                  | Z       | 3       | 2          |
+                  | produto | estoque | quantidade | mensagem                           |
+                  | X       | 1       | 1          | 'Item adicionado ao carrinho'      |
+                  | Y       | 0       | 0          | 'Não possui estoque'               |
+                  | Z       | 3       | 2          | 'Limitado a 1 produto por cliente' |
         
         Cenário: Como cliente eu posso adicionar um item no meu carrinho de compras
             Dado eu estar na página de detalhes do produto do produto "X"

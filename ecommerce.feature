@@ -99,12 +99,13 @@ Como um cliente eu quero editar os itens do meu carrinho de compras, quantidades
             #   E a quantidade do produto no carrinho deve subir em 1
             #   E o nível de estoque é reduzido por 1
 
-
+        @humano
         Cenário: Como cliente eu posso remover um item do meu carrinho de compras
             Dado eu estar na página de carrinho de produto
              Quando eu clicar em no botão de remover do produto
              Então o produto é removido do carrinho
-        
+             
+        @humano
         Cenário: Como cliente eu posso ver os itens do meu carrinho de compras
             Dado eu estou na home page
              Quando eu clicar no ícone de carrinho de compras

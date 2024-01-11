@@ -154,7 +154,10 @@ Ela possui 3 características:
   Exemplo: "Carrinho de Compras - O usuário deve poder alterar os itens do carrinho , mudar quantidades , limpar o carrinho"
 
   - Recomendações quanto a descrição:
-    A Descrição idealmente pode seguir a eguinte estrutura (Centralizada no Papel/Role Centric) - As an (**Como um(a)**) .... (cliente, usuário, consumidor) - I want (**Eu quero**) ...(editar, visualizar.., clicar) - In order to (**A fim de , Para que**) ... (eu possa ter, possa obter)
+    A Descrição idealmente pode seguir a eguinte estrutura (Centralizada no Papel/Role Centric) 
+    - As an (**Como um(a)**) .... (cliente, usuário, consumidor) 
+    - I want (**Eu quero**) ...(editar, visualizar.., clicar) 
+    - In order to (**A fim de , Para que**) ... (eu possa ter, possa obter)
   - Ou eu podemos seguir outra estrutura (Centralizada no Resultado / Result Centric)
     - In order to (**A fim de**)
     - As a (**Como um(a)**)
